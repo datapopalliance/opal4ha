@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanitarian Needs</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-y: auto;
+        }
+
+        body {
+            background: #87CEEB;
+            background: linear-gradient(to bottom, #87CEEB, #E0FFFF);
+            position: relative;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1E3A5F;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4C8CBF;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #1E3A5F;
+            font-family: 'Arial Rounded MT Bold', 'Segoe UI', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 120px 0 20px 0;
+            z-index: 1;
+        }
+
+        .description {
+            width: 80%;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 20px 0;
+            padding: 20px;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #1E3A5F;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            position: relative;
+            bottom: 0;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #1E3A5F;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #4C8CBF;
+        }
+
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.1);
+            z-index: 0;
+        }
+
+        .cloud1 {
+            width: 150px;
+            height: 90px;
+            top: 50px;
+            left: 200px;
+        }
+
+        .cloud2 {
+            width: 200px;
+            height: 120px;
+            top: 150px;
+            left: 500px;
+        }
+
+        .cloud3 {
+            width: 180px;
+            height: 100px;
+            top: 250px;
+            right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado y navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="p2_the_solution.html">The Solution</a></li>
+                <li><a href="p3_core_functionalities.html">Core Functionalities</a></li>
+                <li><a href="p4_demo_platform.html">Demo Platform</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título principal -->
+    <h1>Humanitarian Needs</h1>
+
+    <!-- Contenido principal de la descripción -->
+    <div class="description">
+        <h2>Humanitarian Needs</h2>
+        <p>In Senegal, addressing the flood crisis requires collaboration between government entities, international donors, civil society, and local communities. However, there are three significant challenges impeding effective flood response:</p>
+        
+        <h3>Lack of Timely, Accurate Data</h3>
+        <p>Responding to floods demands precise data which is often unavailable in real time. Local and international actors are forced to rely on outdated and macro-level information, slowing down the response and leaving communities vulnerable.</p>
+        <p>Our solution focuses on leveraging cloud services like AWS to collect, process, and visualize high-resolution, real-time flood data. This will allow stakeholders to act faster, assess damage more accurately, and provide critical support where it's most needed.</p>
+        
+        <h3>Skills Gap in Utilizing Innovative Data Sources</h3>
+        <p>While new technologies like Artificial Intelligence, Satellite Imagery, and Machine Learning are revolutionizing disaster management, local governments and humanitarian organizations often lack the capacity to use these tools effectively.</p>
+        <p>We propose training programs to build the necessary skills for local actors. By democratizing access to cutting-edge tools, we empower Senegalese institutions to better predict, prepare for, and respond to floods.</p>
+
+        <h3>Communication and Coordination Barriers</h3>
+        <p>Coordination among different actors is critical in disaster response, yet Senegal’s flood response efforts are hindered by fragmented communication and siloed operations. This leads to duplicated efforts, misinformation, and ineffective use of resources.</p>
+        <p>Our approach includes a centralized cloud-based platform that facilitates seamless communication between all actors involved in flood response. By providing a clear organizational chart, real-time data sharing, and coordinated actions, we can ensure a more efficient and impactful response to flood crises.</p>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 - OPAL for Humanitarian Action</p>
+    </footer>
+
+
+    <!-- Nubes decorativas -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+</body>
+</html>

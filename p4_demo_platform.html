@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Platform</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-y: auto;
+        }
+
+        body {
+            background: #87CEEB;
+            background: linear-gradient(to bottom, #87CEEB, #E0FFFF);
+            position: relative;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1E3A5F;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4C8CBF;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #1E3A5F;
+            font-family: 'Arial Rounded MT Bold', 'Segoe UI', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 120px 0 20px 0;
+            z-index: 1;
+        }
+
+        .video-container {
+            width: 80%;
+            margin: 20px 0;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            position: relative;
+            bottom: 0;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #1E3A5F;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #4C8CBF;
+        }
+
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.1);
+            z-index: 0;
+        }
+
+        .cloud1 {
+            width: 150px;
+            height: 90px;
+            top: 50px;
+            left: 200px;
+        }
+
+        .cloud2 {
+            width: 200px;
+            height: 120px;
+            top: 150px;
+            left: 500px;
+        }
+
+        .cloud3 {
+            width: 180px;
+            height: 100px;
+            top: 250px;
+            right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado con la navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="p1_humanitarian_needs.html">Humanitarian Needs</a></li>
+                <li><a href="p2_the_solution.html">The Solution</a></li>
+                <li><a href="p3_core_functionalities.html">Core Functionalities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título principal -->
+    <h1>Demo Platform</h1>
+
+    <!-- Contenedor del video centrado y en grande -->
+    <div class="video-container">
+        <video controls>
+            <source src="videos/demo_platform/Opal_low_res.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 - OPAL for Humanitarian Action</p>
+    </footer>
+
+
+    <!-- Nubes decorativas -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPAL4HA</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-y: auto; /* Permite el scroll vertical */
+        }
+        
+        body {
+            background: #87CEEB;
+            background: linear-gradient(to bottom, #87CEEB, #E0FFFF);
+            position: relative;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1E3A5F;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4C8CBF;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #1E3A5F;
+            font-family: 'Arial Rounded MT Bold', 'Segoe UI', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 100px 0 20px 0;
+            z-index: 1;
+        }
+
+        .description {
+            width: 80%;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8; /* Ajuste de espacio entre líneas */
+            text-align: justify;
+            margin: 20px 0;
+            padding: 20px;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            overflow: visible; /* Asegura que el texto no se corte */
+        }
+
+        .banner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 80%;
+            margin: 40px 0;
+            z-index: 1;
+        }
+
+        .banner img,
+        .banner video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .banner img:hover,
+        .banner video:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal container */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .modal img,
+        .modal video {
+            width: 80%;
+            max-height: 80%;
+            border-radius: 15px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            position: relative;
+            bottom: 0;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #1E3A5F;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #4C8CBF;
+        }
+
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.1);
+            z-index: 0;
+        }
+
+        .cloud1 {
+            width: 150px;
+            height: 90px;
+            top: 50px;
+            left: 200px;
+        }
+
+        .cloud2 {
+            width: 200px;
+            height: 120px;
+            top: 150px;
+            left: 500px;
+        }
+
+        .cloud3 {
+            width: 180px;
+            height: 100px;
+            top: 250px;
+            right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="p1_humanitarian_needs.html">Humanitarian Needs</a></li>
+                <li><a href="p2_the_solution.html">The Solution</a></li>
+                <li><a href="p3_core_functionalities.html">Core Functionalities</a></li>
+                <li><a href="p4_demo_platform.html">Demo Platform</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>OPAL for Humanitarian Action</h1>
+
+    <div class="description">
+        Devastating floods continue to ravage West and Central Africa, leaving a staggering humanitarian crisis in their wake. In recent weeks, over 1,000 people have lost their lives, and nearly one million have been displaced due to extreme flooding across Nigeria, Chad, Mali, Niger, and Senegal. Entire families have been left without food, shelter, or access to basic services as floodwaters destroyed homes, submerged hospitals, and wiped out infrastructure.<br><br>
+        The impact of these floods is particularly severe in low- and middle-income countries, where nearly 90% of those highly affected already battle poverty. Women, children, the elderly, and people with disabilities are disproportionately affected by such crises. In Maiduguri, Nigeria, and across Senegal, the floods have compounded existing challenges of poverty, conflict, and displacement, affecting millions of people.<br><br>
+        While Africa contributes only a small percentage of global greenhouse gas emissions, it is disproportionately affected by climate change. Rising temperatures and more frequent extreme weather events threaten to plunge millions further into poverty and hunger. The economic toll is also severe, with Senegal potentially losing up to 8% of its GDP by 2030 due to climate-induced disasters, according to the World Bank.<br><br>
+        Without urgent action, the humanitarian and economic impacts will only grow. Costs are expected to reach $30 to $50 billion annually over the next decade across the affected regions. These floods expose the urgent need for climate adaptation measures and support for vulnerable communities in the face of escalating climate change impacts.
+
+        <p>The images and videos were taken from NYtime's report on the floods in Senegal this 2024: 
+            <a href="https://www.nytimes.com/es/2024/09/16/espanol/mundo/inundaciones-africa.html" target="_blank">
+                New York Times - Inundaciones en África
+            </a>
+        </p>
+    </div>
+
+    <div class="banner">
+        <img src="images/main_page/senegal_1.jpg" alt="Imagen 1" onclick="openModal(this)">
+        <img src="images/main_page/senegal_2.jpg" alt="Imagen 2" onclick="openModal(this)">
+        <img src="images/main_page/senegal_3.jpg" alt="Imagen 3" onclick="openModal(this)">
+        <video controls onclick="openModal(this)">
+            <source src="videos/main_page/123638_1_15vid-africa-floods_wg_720p.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 - OPAL for Humanitarian Action</p>
+    </footer>
+
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            var modalVideo = document.getElementById("modalVideo");
+
+            if (element.tagName === "IMG") {
+                modalImg.src = element.src;
+                modalImg.style.display = "block";
+                modalVideo.style.display = "none";
+            } else {
+                modalVideo.src = element.querySelector("source").src;
+                modalVideo.style.display = "block";
+                modalImg.style.display = "none";
+            }
+            modal.classList.add("active");
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.classList.remove("active");
+            document.getElementById("modalImage").src = "";
+            document.getElementById("modalVideo").src = "";
+        }
+    </script>
+</body>
+</html>
