@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Functionalities and Infrastructure</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-y: auto;
+        }
+
+        body {
+            background: #87CEEB;
+            background: linear-gradient(to bottom, #87CEEB, #E0FFFF);
+            position: relative;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1E3A5F;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4C8CBF;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #1E3A5F;
+            font-family: 'Arial Rounded MT Bold', 'Segoe UI', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 120px 0 20px 0;
+            z-index: 1;
+        }
+
+        .description {
+            width: 80%;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 20px 0;
+            padding: 20px;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #1E3A5F;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            position: relative;
+            bottom: 0;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #1E3A5F;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #4C8CBF;
+        }
+
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.1);
+            z-index: 0;
+        }
+
+        .cloud1 {
+            width: 150px;
+            height: 90px;
+            top: 50px;
+            left: 200px;
+        }
+
+        .cloud2 {
+            width: 200px;
+            height: 120px;
+            top: 150px;
+            left: 500px;
+        }
+
+        .cloud3 {
+            width: 180px;
+            height: 100px;
+            top: 250px;
+            right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado con la navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="p1_humanitarian_needs.html">Humanitarian Needs</a></li>
+                <li><a href="p2_the_solution.html">The Solution</a></li>
+                <li><a href="p4_demo_platform.html">Demo Platform</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título principal -->
+    <h1>Core Functionalities and Infrastructure Overview</h1>
+
+    <!-- Contenido principal de la descripción -->
+    <div class="description">
+        <h2>A. Key Technical Features</h2>
+        <p><b>1.Integration of Diverse Data Sources</b> – OPAL4HA integrates data such as call detail records (CDRs), earth observation (EO) data, surveys, interviews, official statistics, and user data to provide a holistic view of crises.</p>
+        <p><b>2.AI-Powered Query Interface</b> – Generative AI powers an intuitive interface that transforms high-resolution data into timely indicators and insights.</p>
+        <p><b>3.Automatically-Generated Reports</b> – The platform generates reports rapidly, allowing stakeholders to share progress and respond quickly.</p>
+        <p><b>4.Community Inputs</b> – OPAL4HA incorporates on-the-ground insights to enhance information triangulation during crises.</p>
+        <p><b>5.Outreach Messaging</b> – Targeted messages to the public help communities prepare for and manage shocks as crises evolve.</p>
+        <br>
+        <p><b>Intersectional Approach</b> – A Gender Lens is incorporated to ensure inclusive decision-making and tailored response strategies for all community members.</p>
+
+        <h2>B. Infrastructure Diagram</h2>
+        <p>This diagram outlines the deployment and infrastructure setup needed to support the OPAL platform, focusing on scalability, reliability, and effective management of cloud resources...</p>
+        <img src="images/core_functionalities/diagram.png" alt="Imagen 1" onclick="openModal(this)">
+        
+        <h2>C. Project Deployments</h2>
+
+        <p><b>Frontend Deployment:</b> The frontend of the platform will utilize a React-based project to power the dashboard interface. This frontend is designed to be modular, allowing the integration of various components and libraries for responsive visualization. The frontend will exist as its own repository and will communicate with backend services via REST APIs.</p>
+    
+        <p><b>Backend Deployment:</b> The backend will be managed using a Django framework, providing the necessary APIs for frontend communication and handling data-related processes. The backend will exist as a separate repository, designed for scalability and flexibility to accommodate evolving requirements.</p>
+        <ul>
+            <li>The backend supports REST APIs and is responsible for interacting with database systems, handling permissions, and managing data transactions.</li>
+            <li>Packages to aid in development and management of backend services (e.g., ACL & Permissions, ORMs) will be integrated.</li>
+        </ul>
+
+        <p><b>Machine Learning Deployment:</b> The machine learning (ML) services will be deployed independently, allowing the platform to leverage artificial intelligence (AI) capabilities without disrupting the rest of the infrastructure.</p>
+        <ul>
+            <li>A lightweight web server such as Flask or FastAPI will power the ML services, which will interact directly with the backend.</li>
+            <li>By keeping the AI components independent, we ensure stability and scalability, avoiding interruptions to other services during updates or downtimes.</li>
+            <li>ML services will support functionalities like chatbot operations, vector-based data analysis, and integration with third-party AI services.</li>
+        </ul>
+
+        <h2>D. Resources Needed</h2>
+        <p><b>Storage:</b></p>
+        <ul>
+            <li>Object storage is required to handle various assets, including media files and data relevant to the platform's operations. This will ensure easy accessibility and efficient data retrieval. </li> 
+        </ul>
+        <p><b>Database:</b></p>
+        <ul>
+            <li> A relational database will be utilized to store structured data. Separate schemas will be used for the dashboard and data aggregation.</li> 
+            <li> The dashboard will manage its own schema for operational data, while other schemas will support AI-generated data outputs, ensuring segregation of data responsibilities.</li> 
+        </ul>
+        <p><b>Caching & Performance Optimization:</b></p>
+        <ul>
+            <li>A caching layer will be integrated to store frequently accessed data, optimizing system performance and minimizing database load. </li>
+            <li>This will improve data retrieval times, especially for services like the AI and dashboard, which will heavily rely on rapid access to pre-processed data.</li>
+        </ul>
+        <p><b>Specialized Data Operations:</b></p>
+        <ul>
+            <li> A vector database will be incorporated to handle operations related to vector-based data, particularly in ML applications. This will allow for more complex operations, such as vector similarity searches and recommendations.</li> 
+        </ul>
+
+        <h2>E. Monitoring and Performance</h2>
+        
+        <p><b>Monitoring Tools:</b></p>
+        <ul>
+            <li>The infrastructure will include a centralized logging and monitoring system to track errors, warnings, and system performance. Logs from all services will be routed to a centralized location for easy troubleshooting and performance optimization.</li>
+            <li>Metrics related to backend deployments will be monitored, and alerts can be set for various thresholds to ensure timely responses to issues.</li>
+        </ul>
+        <p><b>Visualization:</b></p>
+        <ul>
+            <li> Dashboards will be available to visualize system health and performance metrics, allowing for proactive system management and reporting.</li> 
+        </ul>
+
+
+        <h2>OPAL4HA Roadmap</h2>
+        <p>This OPAL Roadmap visual outlines the timeline for different phases of the OPAL platform's development from Q3 2023 through Q3 2025. It highlights the key milestones in the development of the platform, with overlapping phases for designing, prototyping, and releasing various versions.</p>
+        <img src="images/core_functionalities/gant_map.png" alt="Imagen 1" onclick="openModal(this)">
+        
+        <p>The key milestones are as follow:</p>
+
+        <ol>
+            <li>
+                <b>Design Phase (Q3 2023 - Q1 2024):</b>
+                <ul class="sub-list">
+                    <li>Initial design efforts are focused on laying the groundwork for the platform.</li>
+                </ul>
+            </li>
+            <li>
+                <b>PoC's V0 (Q4 2023 - Q1 2024):</b>
+                <ul class="sub-list">
+                    <li>A Proof of Concept (PoC) is created, followed by its mock-up for initial validation.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Mock-up V0 (Q1 2024 - Q2 2024):</b>
+                <ul class="sub-list">
+                    <li>The mock-up design is completed and transitions into the development of Prototype V1.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Prototype V1 (Q2 2024 - Q4 2024):</b>
+                <ul class="sub-list">
+                    <li>The first prototype is developed and further refined.</li>
+                </ul>
+            </li>
+            <li>
+                <b>MVP V0 (Q4 2024 - Q1 2025):</b>
+                <ul class="sub-list">
+                    <li>A Minimal Viable Product (MVP) is launched, following extensive iterations from PoCs and prototypes.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Parallel Stream:</b>
+                <ul class="sub-list">
+                    <li>A parallel development stream starts with a second PoC's V0 and Mock-up V0 (Q1 2024 - Q2 2024), which is later developed into Prototype V1 and MVP V0 during 2024-2025.</li>
+                </ul>
+            </li>
+            <li>
+                <b>Completion and Refinement:</b>
+                <ul class="sub-list">
+                    <li>After the MVP launch, additional iterations and refinements continue into Q3 2025, with a focus on stabilizing the platform.</li>
+                </ul>
+            </li>
+        </ol>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 - OPAL for Humanitarian Action</p>
+    </footer>
+
+    <!-- Nubes decorativas -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+</body>
+</html>
